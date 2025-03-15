@@ -85,6 +85,6 @@ button.view-moderation-btn {
   transition: background-color 0.3s ease;
 }
 
-button.view-moderation-btn:hover {
+button.view-page-btn:hover {
   background-color: #2ecc71;
 }
