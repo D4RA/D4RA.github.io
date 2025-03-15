@@ -4,72 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Posts</title>
-    <style>
-      .post-box {
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .post-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .post-menu {
-        background-color: #f2f2f2;
-        padding: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .post-menu:hover {
-        background-color: #e0e0e0;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the CSS file -->
   </head>
   <body>
-    <!-- Button to view moderation page -->
-    <div style="margin-top: 20px">
-      <a href="/moderation">
-        <button>View Moderation Page</button>
-      </a>
-    </div>
     <h1>User Posts</h1>
-    
     <div class="post-box">
       <div class="post-header">
         <strong>john_doe</strong>
         <div class="post-menu">
           <form action="/moderate" method="POST" style="display: inline">
-            <input type="hidden" name="id" value="" />
+            <input type="hidden" name="id" value="<%= post.id %>" />
             <button type="submit">Moderate</button>
           </form>
           <form action="/ban" method="POST" style="display: inline">
-            <input type="hidden" name="id" value="" />
+            <input type="hidden" name="id" value="<%= post.id %>" />
             <button type="submit">Ban User</button>
           </form>
         </div>
       </div>
       <p>This is a random post content.</p>
     </div>
-    
     <div class="post-box">
       <div class="post-header">
         <strong>jane_smith</strong>
         <div class="post-menu">
           <form action="/moderate" method="POST" style="display: inline">
-            <input type="hidden" name="id" value="" />
+            <input type="hidden" name="id" value="<%= post.id %>" />
             <button type="submit">Moderate</button>
           </form>
           <form action="/ban" method="POST" style="display: inline">
-            <input type="hidden" name="id" value="" />
+            <input type="hidden" name="id" value="<%= post.id %>" />
             <button type="submit">Ban User</button>
           </form>
         </div>
       </div>
       <p>Another random post here!</p>
     </div>
-    
+
+    <!-- Button to view moderation page -->
+    <a href="/moderation">
+      <button class="view-moderation-btn">View Moderation Page</button>
+    </a>
   </body>
 </html>
