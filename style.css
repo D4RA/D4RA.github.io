@@ -28,7 +28,7 @@ h1 {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   max-height: none; /* Limit the height of the post box */
-  overflow: hidden; /* Hide overflow content */
+  overflow: auto; /* Hide overflow content */
 }
 
 .post-box:hover {
@@ -88,5 +88,5 @@ button.view-moderation-btn {
 }
 
 button.view-moderation-btn:hover {
-  background-color: #2ecc71;
+  background-color: #09110d;
 }
